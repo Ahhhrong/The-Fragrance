@@ -1,4 +1,84 @@
 
+.TopWordsFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.navigationBar {
+  overflow: hidden;
+  background-color: #9CCAF0;
+}
+
+.navigationBar a {
+  float: left;
+  color: #0063DB;
+  font-family: 'VT323', monospace;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navigationBar .icon {
+  display: none;
+}
+
+.topLineNav {
+  display: inline-block;
+  position: relative;
+  color:  #0063DB;
+  font-family: 'VT323', monospace;
+}
+
+.topLineNav::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  top: 1.15cm;
+  bottom: 0;
+  left: 0;
+  background-color:  #0063DB;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.topLineNav:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media screen and (max-width: 1000px) {
+  .navigationBar a:not(:first-child) {display: none;}
+  .navigationBar a.icon {
+    float: right;
+    display: block;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navigationBar.responsive {position: relative;}
+  .navigationBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navigationBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topLineNav::after{
+      transition: transform 0.3s ease-out;
+  }
+
+  .TopWordsFlex{
+      flex-direction: column;
+  }
+}
 .video-js {
   width: 300px;
   height: 150px;
