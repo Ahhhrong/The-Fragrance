@@ -474,3 +474,7 @@ body{
       margin-top: 2rem;
     }
   }  
+
+.btn btn-primary {
+    cursor: pointer;
+}
