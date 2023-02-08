@@ -12,15 +12,15 @@ $(document).ready(function () {
       //[STEP 2]: let's retrieve form data
       //for now we assume all information is valid
       //you are to do your own data validatAion
-      let contactName = $("#contact-name").val();
-      let contactEmail = $("#contact-email").val();
-      let contactMessage = $("#contact-msg").val();
+      let username = $("#username").val();
+      let password = $("#password").val();
+      
   
       //[STEP 3]: get form values when user clicks on send
       //Adapted from restdb api
       let jsondata = {
-        "username": "1234contactName",
-        "password": "KNN@GMAIL.COM",
+        "username": username,
+        "password": password,
         
       };
   
@@ -39,12 +39,16 @@ $(document).ready(function () {
         "data": JSON.stringify(jsondata),
         
       }
-  
+      
       //[STEP 5]: Send our ajax request over to the DB and print response of the RESTDB storage to console.
-      $.ajax(settings).done(function (response) {
-        console.log(response);
+      var req=$.ajax(settings)
+      req.done(function (response) {
+        alert("register successfully")
         
         
+      });
+      req.fail(function(fail){
+        alert("Username Existed")
       });
     });//end click 
   
