@@ -474,27 +474,3 @@ body{
       margin-top: 2rem;
     }
   }  
-
-.btn btn-primary {
-    cursor: pointer;
-    place-content: center;
-}
-
-.loader {
-    pointer-events: none;
-    width: 30px; 
-    height 30px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: white;
-    animation: l 1s ease infinite; 
-}
-
-@keyframes l {
-    0% { 
-        transform: rotate(0turn);
-    }
-    100% {
-        transform: rotate(1turn);
-    }
-}
