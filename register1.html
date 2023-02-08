@@ -54,6 +54,7 @@
           <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
           <input type="submit" value="Register" class="btn btn-primary" id="register" onclick="location.href='loadingscreen.html';">
+	  <div class="loader"></div>
          <hr>
           <div >
             <p>Already have an account? <a href="login.html">Sign in</a>.</p>
@@ -61,7 +62,15 @@
         </form>
     </div>
   </div><!-- end add container --> 
-	
+<script> btn btn-primary = document.querySelector(".btn btn-primary");
+	btn btn-primary.onclick = function() {
+		this.innerHTMl = "<div class="loader"></div>";
+		setTimeout(() => {
+			this.innerHTML = "Success!";
+			this.style = "backgroundL #f1f2f4; color: #333; pointer-events: none";
+		},2000);
+	}
+</script>	
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
