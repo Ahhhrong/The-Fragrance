@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Normalize.css">
+
+    <title>jjlin</title>
+    <script src="a.js"></script>
+    
+    <style class="vjs-styles-defaults">
+        .video-js {
+          width: 300px;
+          height: 150px;
+        }
+  
+        .vjs-fluid {
+          padding-top: 56.25%
+        }
+      </style>
+    <link rel="stylesheet" href="https://start.sanctuarytech.co/dist/js/element-ui.css">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-851C9SJSJN&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WVCBJFS"></script>
+   
+</head>
+<header style="width: 100%;background-color: black;">
+  <div style="background-color: white;width: 100%;"  >        <a href="index.html" class="center"><img class="center" src="logo1.png"></a>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .mobile-container {
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+    border-radius: 10px;
+    }
+
+    .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    }
+
+    .topnav #myLinks {
+    display: none;
+    }
+
+    .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    }
+
+    .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+
+    .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    .active {
+    background-color: black;
+    color: white;
+    }
+    </style>
+
+
+    <!-- Simulate a smartphone / tablet -->
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+    <a href="index.html" class="active">Checkout</a>
+    <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shopping</a>
+        <a href="cont.html">Contact</a>
+        <a href="album.html">Album</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    </div>
+
+    
+
+    <!-- End smartphone / tablet look -->
+    </div>
+
+    <script>
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    }
+    </script>
+
+
+</header>
+<body >
+    <!-- <div class="center">
+       
+       <table class="container">
+        <br>
+        <tr >
+            <td style="width: 100px;"></td>
+            <td style="width: 200px;">Product Name</td>
+            <td style="width: 200px;">Quantity</td>
+            <td style="width: 200px;">Price Per Product</td>
+            <td style="width: 200px;">Total Price</td>
+        </tr>
+        <tr >
+            
+            </script>
+            <p id="demo"></p>
+            <td style="width: 100px;"></td>
+            <td style="width: 200px;" ><span id="pproduct"></span></td>
+            <td style="width: 200px;" id="pquantity"></td>
+            <td style="width: 200px;" id="pprice"></td>
+            <td style="width: 200px;" id="ptotal"></td>
+        </tr>
+       </table>
+    </div> -->
+    <style>
+        body {
+          font-family: Arial;
+          font-size: 17px;
+          padding: 8px;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        .row {
+          display: -ms-flexbox; /* IE10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE10 */
+          flex-wrap: wrap;
+          margin: 0 -16px;
+        }
+        
+        .col-25 {
+          -ms-flex: 25%; /* IE10 */
+          flex: 25%;
+        }
+        
+        .col-50 {
+          -ms-flex: 50%; /* IE10 */
+          flex: 50%;
+        }
+        
+        .col-75 {
+          -ms-flex: 75%; /* IE10 */
+          flex: 75%;
+        }
+        
+        .col-25,
+        .col-50,
+        .col-75 {
+          padding: 0 16px;
+        }
+        
+        
+        
+        input[type=text] {
+          width: 100%;
+          margin-bottom: 20px;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+        
+        label {
+          margin-bottom: 10px;
+          display: block;
+        }
+        
+        .icon-container {
+          margin-bottom: 20px;
+          padding: 7px 0;
+          font-size: 24px;
+        }
+        
+        .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px;
+          margin: 10px 0;
+          border: none;
+          width: 100%;
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 17px;
+        }
+        
+        .btn:hover {
+          background-color: #45a049;
+        }
+        
+        a {
+          color: #2196F3;
+        }
+        
+        hr {
+          border: 1px solid lightgrey;
+        }
+        
+        span.price {
+          float: right;
+          color: grey;
+        }
+        
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+        @media (max-width: 800px) {
+          .row {
+            flex-direction: column-reverse;
+          }
+          .col-25 {
+            margin-bottom: 20px;
+          }
+          .center{
+          width: 80%;
+          font-size: x-small;
+          margin-left: auto;
+          margin-right: auto;
+        
+          }
+          .footer
+          {
+            font-size: xx-small;
+            flex-direction: column-reverse;
+            font-size: 9px;
+          }
+          .footer1
+          {
+            margin-left: 35%;
+          }
+        }
+        </style>
+        </head>
+        <body>
+     <div class="row">
+          <div class="col-75">
+            <div class="container">
+              <form action="checkout1.html">
+              
+                <div class="row">
+                  <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="name" placeholder="John M. Doe" required>
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="femail" name="email" placeholder="john@example.com"required>
+                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="faddress" name="address" placeholder="542 W. 15th Street"required>
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="fcity" name="city" placeholder="New York">
+        
+                    <div class="row">
+                      <div class="col-50">
+                        <label for="state">State</label>
+                        <input type="text" id="fstate" name="state" placeholder="NY"required>
+                      </div>
+                      <div class="col-50">
+                        <label for="zip">Zip</label>
+                        <input type="text" id="fzip" name="zip" placeholder="10001"required>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-50">
+                    <h3>Payment</h3>
+                    <label for="fname">Accepted Cards</label>
+                    <div class="icon-container">
+                      <i class="fa fa-cc-visa" style="color:navy;"></i>
+                      <i class="fa fa-cc-amex" style="color:blue;"></i>
+                      <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                      <i class="fa fa-cc-discover" style="color:orange;"></i>
+                    </div>
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="fcname" name="cname" placeholder="John More Doe" required/>
+                    <label for="ccnum">Credit card number</label>
+                    <input type="text" id="fcard" name="cnumber" placeholder="1111-2222-3333-4444" required>
+                    <label for="expmonth">Exp Month</label>
+                    <input type="text" id="fmonth" name="cmonth" placeholder="September">
+                    <div class="row">
+                      <div class="col-50">
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" id="fyear" name="cyear" placeholder="2018" required>
+                      </div>
+                      <div class="col-50">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="fcvv" name="cvv" placeholder="352" required >
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label>
+                <input type="submit" value="Continue to checkout" class="btn" onclick="checkout1()">
+
+              </form>
+
+            </div>
+          </div>
+          <div class="col-25">
+            <div class="container">
+              <script type="text/javascript">
+                
+                window.onload=function(){what()}
+                function what(){
+                document.getElementById("product1").innerHTML=localStorage.getItem("product1")
+                document.getElementById("product2").innerHTML=localStorage.getItem("product2")
+                document.getElementById("product3").innerHTML=localStorage.getItem("product3")
+                document.getElementById("product4").innerHTML=localStorage.getItem("product4")
+                document.getElementById("product5").innerHTML=localStorage.getItem("product5")
+                document.getElementById("product6").innerHTML=localStorage.getItem("product6")
+                document.getElementById("product7").innerHTML=localStorage.getItem("product7")
+                document.getElementById("product8").innerHTML=localStorage.getItem("product8")
+
+                var price1 = document.getElementById("price1").innerHTML= localStorage.getItem("price1")
+                var price2 = document.getElementById("price2").innerHTML= localStorage.getItem("price2")
+                var price3 = document.getElementById("price3").innerHTML= localStorage.getItem("price3")
+                var price4 = document.getElementById("price4").innerHTML= localStorage.getItem("price4")
+                var price5 = document.getElementById("price5").innerHTML= localStorage.getItem("price5")
+                var price6 = document.getElementById("price6").innerHTML= localStorage.getItem("price6")
+                var price7 = document.getElementById("price7").innerHTML= localStorage.getItem("price7")
+                var price8 = document.getElementById("price8").innerHTML= localStorage.getItem("price8")
+
+                var quantity1 = document.getElementById("quantity1").innerHTML=localStorage.getItem("quantity1")
+                var quantity2 =document.getElementById("quantity2").innerHTML=localStorage.getItem("quantity2")
+                var quantity3 =document.getElementById("quantity3").innerHTML=localStorage.getItem("quantity3")
+                var quantity4 =document.getElementById("quantity4").innerHTML=localStorage.getItem("quantity4")
+                var quantity5 =document.getElementById("quantity5").innerHTML=localStorage.getItem("quantity5")
+                var quantity6 =document.getElementById("quantity6").innerHTML=localStorage.getItem("quantity6")
+                var quantity7 =document.getElementById("quantity7").innerHTML=localStorage.getItem("quantity7")
+                var quantity8 =document.getElementById("quantity8").innerHTML=localStorage.getItem("quantity8")
+
+                if(localStorage.getItem("product1")!=null)
+                {
+                  document.getElementById("delete1").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product2")!=null)
+                {
+                  document.getElementById("delete2").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product3")!=null)
+                {
+                  document.getElementById("delete3").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product4")!=null)
+                {
+                  document.getElementById("delete4").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product5")!=null)
+                {
+                  document.getElementById("delete5").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product6")!=null)
+                {
+                  document.getElementById("delete6").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product7")!=null)
+                {
+                  document.getElementById("delete7").innerHTML = "Delete"
+                }
+                if(localStorage.getItem("product8")!=null)
+                {
+                  document.getElementById("delete8").innerHTML = "Delete"
+                }
+                
+                var d = 0
+                if (price1 !=null)
+                {
+                  d+=parseInt(price1 *quantity1)
+                }
+                if (price2 !=null)
+                {
+                  d+=parseInt(price2 *quantity2)
+                }
+                if (price3 !=null)
+                {
+                  d+=parseInt(price3 *quantity3)
+                }
+                if (price4 !=null)
+                {
+                  d+=parseInt(price4 *quantity4)
+                }
+                if (price5 !=null)
+                {
+                  d+=parseInt(price5 *quantity5)
+                }
+                if (price6 !=null)
+                {
+                  d+=parseInt(price6 *quantity6)
+                }
+                if (price7 !=null)
+                {
+                  d+=parseInt(price7 *quantity7)
+                }
+                if (price8 !=null)
+                {
+                  d+=parseInt(price8 *quantity8)
+                }
+                document.getElementById("ttotal").innerHTML=d
+                
+                }
+                
+                function delete1(){
+                  localStorage.removeItem("product1")
+                  localStorage.removeItem("price1")
+                  localStorage.removeItem("quantity1")
+                }
+                function delete2(){
+                  localStorage.removeItem("product2")
+                  localStorage.removeItem("price2")
+                  localStorage.removeItem("quantity2")
+                }
+                function delete3(){
+                  localStorage.removeItem("product3")
+                  localStorage.removeItem("price3")
+                  localStorage.removeItem("quantity3")
+                }
+                function delete4(){
+                  localStorage.removeItem("product4")
+                  localStorage.removeItem("price4")
+                  localStorage.removeItem("quantity4")
+                }
+                function delete5(){
+                  localStorage.removeItem("product5")
+                  localStorage.removeItem("price5")
+                  localStorage.removeItem("quantity5")
+                }
+                function delete6(){
+                  localStorage.removeItem("product6")
+                  localStorage.removeItem("price6")
+                  localStorage.removeItem("quantity6")
+                }
+                function delete7(){
+                  localStorage.removeItem("product7")
+                  localStorage.removeItem("price7")
+                  localStorage.removeItem("quantity7")
+                }
+                function delete8(){
+                  localStorage.removeItem("product8")
+                  localStorage.removeItem("price8")
+                  localStorage.removeItem("quantity8")
+                }
+              </script>
+              <h4>Cart <span style="margin-left: 50px;">qty</span><span style="margin-left: 50px;">Price</span><span  style="color:black;margin-left: 40px  ;"><i class="fa fa-shopping-cart"></i> <b></b></span></h4>
+              
+              <P><span  id ="product1" style="margin-right: 40px;"></span><span  id="quantity1" style="margin-right: 40px;"></span> <span  id ="price1" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete1" onclick="delete1()"></span></a></P>
+              <P><span  id ="product2" style="margin-right: 40px;"></span><span  id="quantity2" style="margin-right: 40px;"></span> <span  id ="price2" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete2" onclick="delete2()"></span></a></P>
+              <P><span  id ="product3" style="margin-right: 40px;"></span><span  id="quantity3" style="margin-right: 40px;"></span> <span  id ="price3" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete3" onclick="delete3()"></span></a></P>
+              <P><span  id ="product4" style="margin-right: 40px;"></span><span  id="quantity4" style="margin-right: 40px;"></span> <span  id ="price4" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete4" onclick="delete4()"></span></a></P>
+              <P><span  id ="product5" style="margin-right: 40px;"></span><span  id="quantity5" style="margin-right: 40px;"></span> <span  id ="price5" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete5" onclick="delete5()"></span></a></P>
+              <P><span  id ="product6" style="margin-right: 40px;"></span><span  id="quantity6" style="margin-right: 40px;"></span> <span  id ="price6" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete6" onclick="delete6()"></span></a></P>
+              <P><span  id ="product7" style="margin-right: 40px;"></span><span  id="quantity7" style="margin-right: 40px;"></span> <span  id ="price7" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete7" onclick="delete7()"></span></a></P>
+              <P><span  id ="product8" style="margin-right: 40px;"></span><span  id="quantity8" style="margin-right: 40px;"></span> <span  id ="price8" style="margin-right: 40px;"></span><a href="checkout.html"><span id="delete8" onclick="delete8()"></span></a></P> 
+
+              <hr>
+              <p>Total <span class="price" style="color:black" id="ttotal" ><b></b></span></p>
+            </div>
+          </div>
+   
+        </div>
+        <br><br><br>       
+        
+
+</body>
+
+</html>
+</html>
