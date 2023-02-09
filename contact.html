@@ -8,86 +8,42 @@
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	<header class="navigationBar" id="MYnavigationBar" >
+    	<div class = "TopWordsFlex">
+      	<a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+      	<a class="topLineNav" href="index.html">Home</a>
+      	<a class="topLineNav" href="body.html">Body</a>
+      	<a class="topLineNav" href="hair.html">Hair</a>
+      	<a class="topLineNav" href="contact.html">Feedback</a>
+      	<a class="topLineNav" href="checkout.html">Cart</a>
+      	<a class="topLineNav" href="login.html">Login</a>
+      	<a class="topLineNav" href="register.js">Register</a>
+      	<a class="topLineNav" onclick="openForm()" >Profile Info</a>
 </head>
 
 <body>
-
-	<div class="container">
-		<h1>Simple Contact Form System</h1>
-		<div id="add-update-msg">
-			<div class="alert alert-success" role="alert">
-				Contact record successfully added
+	<div class="wrapper">
+		<h2>Contact Us</h2>
+		<div id="error_message"></div>
+		<form id="myform" onsubmit="return validate();">
+			<p>Name *</p>
+			<input id="txt_name" type="text" Required="required">
+			<p>Email *</p>
+			<input id="txt_email" type="text" Required="required">
+			<p>Phone *</p>
+			<input id="txt_phone" type="text" Required="required">
+			<p>Subject *</p>
+			<input id="txt_subject" type="text" Required="required">
+			<p>Message *</p>
+			<textarea id="txt_message" rows="4" cols="21" Required="required" ></textarea>
+			<div class="btn">
+				<input type="submit">
 			</div>
-		</div>
-		<div class="form" id="add-contact">
-			<form id="add-contact-form">
-				<div class="form-group">
-					<label for="contact-name">Name</label>
-            <input type="text" id="contact-name" class="form-control" required>
-          </div>
-          <div class="form-group">
-            <label for="contact-email">Email</label>
-            <input type="email" id="contact-email" class="form-control" required>
-            <small id="contact-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label for="contact-msg">Message</label>
-            <textarea id="contact-msg" class="form-control" required>
-            </textarea>
-          </div>
-
-          <input type="submit" value="Send" class="btn btn-primary" id="contact-submit">
-      </form>
-    </div>
-  </div><!-- end add container --> 
-
-  <div class="container mt-5">
-    <h2>Table information of Contacts (<span id="total-contacts"></span>)</h2>
-    <table class="table" id="contact-list">
-      <thead>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Message</th>
-        <th colspan="2">Actions</th>
-        
-      </thead>
-      <!-- This will be filled with information later -->
-      <tbody></tbody>
-    </table>
-  </div>
-  
-  <div class="container mt-5" id="update-contact-container"> 
-    <div id="add-update-msg">
-			<div class="alert alert-success" role="alert">
-				Contact record updated sucessfully
-			</div>
-		</div>
-    <h4>Update Contact</h4>
-    <div class="form" id="update-contact">
-			<form id="update-contact-form">
-				<div class="form-group">
-					<label for="update-contact-name">Name</label>
-          <input type="text" id="update-contact-name" class="form-control" required>
-          </div>
-          <div class="form-group">
-          <label for="update-contact-email">Email</label>
-          <input type="email" id="update-contact-email" class="form-control" required>
-           <small id="update-contact-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-          <label for="update-contact-msg">Message</label>
-          <textarea id="update-contact-msg" class="form-control" required>
-          </textarea>
-          <input type="hidden" id="update-contact-id">
-          </div>
-
-          <input type="submit" value="Update Contact Details" class="btn btn-warning" id="update-contact-submit">
-        </form>
-    </div>
-  </div>
+		</form>
+	</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/popper.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="feedback.js"></script>
-  </body>
+ </body>
 </html>
