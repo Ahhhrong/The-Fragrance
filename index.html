@@ -6,14 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Normalize.css">
+    <script src="product.js"></script>
 
-    <title>jjlin</title>
     <script src="a.js"></script>
     <link rel="stylesheet" href="https://start.sanctuarytech.co/dist/js/element-ui.css">
     <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-851C9SJSJN&amp;l=dataLayer&amp;cx=c"></script>
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WVCBJFS"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+<script src="login.js"></script>
+    <header class="navigationBar" id="MYnavigationBar" >
+      <div class = "TopWordsFlex">
+          <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+          <a class="topLineNav" href="index.html">HOME</a>
+          <a class="topLineNav" href="body.html">Body</a>
+          <a class="topLineNav" href="hair.html">Hair</a>
+          <a class="topLineNav" href="contact.html">Feedback</a>
+          <a class="topLineNav" href="checkout.html">Cart</a>
+
+          <a class="topLineNav" href="login.html">Login</a>
+          <a class="topLineNav" href="register.js">register</a>
+          <button class="open-button" onclick="openForm()">Profile Info</button>
+
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+          
+              <P id="displayname"></P>
+              <br>
+              <P id="point"></P>
+              <br>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+          <script>
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+
+            }
+            
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+
+            }
+            </script>          
+            
+  <script>                    document.getElementById("displayname").innerHTML="user "+ localStorage.getItem("username")+"\n"
+   document.getElementById("point").innerHTML="point "+ localStorage.getItem("point")
+  </script>
+          <a href="javascript:void(0);" class="icon" onclick="navigationbar()"><i class="fa fa-bars"></i></a>
+          <script>function navigationbar() {
+            var x = document.getElementById("MYnavigationBar");
+                if (x.className === "navigationBar") 
+                {
+                    x.className += " responsive";
+                } 
+                else 
+                {
+                    x.className = "navigationBar";
+                } 
+            }</script>
+      </div>
+    </header>
+</head>   
 <body>
     <div class="slideshow-container" >
 
@@ -160,10 +214,9 @@
           to {opacity: 1}
         }
         
-        /* On smaller screens, decrease text size */
         
-          @media (max-width: 800px) {
-            .center{
+           @media (max-width: 800px) {
+             .center{
               width: 80%;
               font-size: x-small;
               margin-left: auto;
@@ -179,7 +232,7 @@
             .footer1
             {
               margin-left: 35%;
-            }
+            } 
           
           
         }
@@ -238,21 +291,27 @@
       <div class="row">
         <div class="column">
             <div class="container">
-                <img src="img/cat1.jpg" alt="Snow" style="width:100%">
-                <div class="centered">Hair Product</div>
+              <a href="hair.html">                
+                <img src="img/cat1.jpg" alt="Snow" style="width:100%">             
+                   <div class="centered" style="color: white;">Hair Product</div>
+              </a>
 
             </div>
         </div>
         <div class="column">
             <div class="container">
-                <img src="img/cat2.jpg" alt="Snow" style="width:100%">
-                <div class="centered">Body Product</div>
+              <a href="body.html">                
+                <img src="img/cat2.jpg" alt="Snow" style="width:100%">             
+                   <div class="centered" style="color: white;">Hair Product</div>
+              </a>
 
             </div>        </div>
         <div class="column">
             <div class="container">
-                <img src="img/cat3.jpg" alt="Snow" style="width:100%">
-                <div class="centered">Face product</div>
+              <a href="topselling.html">                
+                <img src="img/cat3.jpg" alt="Snow" style="width:100%">             
+                   <div class="centered" style="color: white;">Top Selling</div>
+              </a>
 
             </div>        </div>
       </div>
@@ -262,13 +321,12 @@
             <div class="column" style="width: 300px;margin: auto;">
                 <div class="card" >
                     <img class= "image" src="img/body1.jpg" >
-                    <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
+                    <h1 class="center" style="font-size: medium;" id="product1" >Product1</h1>
                     <a>$</a><span  id="price1" >79</span>
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <br>
+             
                     <select  id="quantity1">
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -278,180 +336,188 @@
             
                     </select>
                         <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
+                        <br>
+                        <br>
+
+                        <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
                       </div>
-            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
+            </div><div class="column" style="width: 300px;margin: auto;">
+              <div class="card" >
                   <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
+                  <h1 class="center" style="font-size: medium;" id="product2" >Product2</h1>
+                  <a>$</a><span  id="price2" >79</span>
+                  <br>
+                  <br>
+                  <br>
+           
+                  <select  id="quantity2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+          
+                  </select>
+                      <br>
+                      <br>
+                      <br>
+
+                      <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product2()" >Add to Cart</button></a></p>
+                    </div>
+          </div><div class="column" style="width: 300px;margin: auto;">
+            <div class="card" >
+                <img class= "image" src="img/body1.jpg" >
+                <h1 class="center" style="font-size: medium;" id="product3" >product3</h1>
+                <a>$</a><span  id="price3" >79</span>
+                <br>
+                <br>
+                <br>
+         
+                <select  id="quantity3">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+        
+                </select>
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                      </div>            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                </div>          
-            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                </div>          
-            </div>
+
+                    <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product3()" >Add to Cart</button></a></p>
+                  </div>
+        </div><div class="column" style="width: 300px;margin: auto;">
+          <div class="card" >
+              <img class= "image" src="img/body1.jpg" >
+              <h1 class="center" style="font-size: medium;" id="product4" >product4</h1>
+              <a>$</a><span  id="price4" >79</span>
+              <br>
+              <br>
+              <br>
+       
+              <select  id="quantity4">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+      
+              </select>
+                  <br>
+                  <br>
+                  <br>
+
+                  <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product4()" >Add to Cart</button></a></p>
+                </div>
+      </div>
           </div>
 
       </div>
       <br><br><br>
       <div class="card" >
         <div class="row">
-            <p class="center" style="font-size: x-large;">Body Product</p>
-            <hr>
+            <p class="center" style="font-size: x-large;">Hair Product</p>
             <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
+              <div class="card" >
+                <img class= "image" src="img/body1.jpg" >
+                <h1 class="center" style="font-size: medium;" id="product5" >Product5</h1>
+                <a>$</a><span  id="price5" >79</span>
+                <br>
+                <br>
+                <br>
+         
+                <select  id="quantity5">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+        
+                </select>
                     <br>
                     <br>
                     <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                      </div>
-            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                      </div>            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                </div>          
-            </div>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product1" >Anniversary Tee</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        
-                        <p><a href="checkout.html"><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                </div>          
-            </div>
-          </div>
 
+                    <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product5()" >Add to Cart</button></a></p>
+                  </div>
+            
+          </div>
+          <div class="column" style="width: 300px;margin: auto;">
+            <div class="card" >
+                <img class= "image" src="img/body1.jpg" >
+                <h1 class="center" style="font-size: medium;" id="product6" >product6</h1>
+                <a>$</a><span  id="price6" >79</span>
+                <br>
+                <br>
+                <br>
+         
+                <select  id="quantity6">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+        
+                </select>
+                    <br>
+                    <br>
+                    <br>
+
+                    <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product6()" >Add to Cart</button></a></p>
+                  </div>
+                </div><div class="column" style="width: 300px;margin: auto;">
+                  <div class="card" >
+                      <img class= "image" src="img/body1.jpg" >
+                      <h1 class="center" style="font-size: medium;" id="product7" >product7</h1>
+                      <a>$</a><span  id="price7" >79</span>
+                      <br>
+                      <br>
+                      <br>
+               
+                      <select  id="quantity7">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+              
+                      </select>
+                          <br>
+                          <br>
+                          <br>
+        
+                          <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product7()" >Add to Cart</button></a></p>
+                        </div>
+                      </div><div class="column" style="width: 300px;margin: auto;">
+                        <div class="card" >
+                            <img class= "image" src="img/body1.jpg" >
+                            <h1 class="center" style="font-size: medium;" id="product8" >product8</h1>
+                            <a>$</a><span  id="price8" >79</span>
+                            <br>
+                            <br>
+                            <br>
+                     
+                            <select  id="quantity8">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                    
+                            </select>
+                                <br>
+                                <br>
+                                <br>
+              
+                                <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product8()" >Add to Cart</button></a></p>
+                              </div>
+      
+                
       </div>
+          </div>
+      </div>
+      
 </body>
 
 <footer>
