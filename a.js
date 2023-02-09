@@ -98,9 +98,14 @@ function Validate() {
 
     return isChecked;
 }
+function loadinganimation(){
+    document.getElementById("myForm1").style.display = "none";
+
+}
 function checkout1()
 {
-
+    document.getElementById("myForm1").style.display = "block";
+    setTimeout(loadinganimation,5000)
     let a1 = document.getElementById("fcname").value;
     let a2 = document.getElementById("fcard").value;
     let a3 = document.getElementById("fmonth").value;
@@ -112,10 +117,23 @@ function checkout1()
     let a9 = document.getElementById("fcity").value;
     let a10 = document.getElementById("fzip").value;
     let a11 = document.getElementById("fstate").value;
-  
+    localStorage.setItem("fcname",a1)
+    localStorage.setItem("fcard",a2)
+    localStorage.setItem("fmonth",a3)
+    localStorage.setItem("fcvv",a4)
+    localStorage.setItem("fyear",a5)
+    localStorage.setItem("fname",a6)
+    localStorage.setItem("femail",a7)
+    localStorage.setItem("faddress",a8)
+    localStorage.setItem("fcity",a9)
+    localStorage.setItem("fzip",a10)
+    localStorage.setItem("fstate",a11)
+
     if (a6.length ==0||a7.length ==0||a8.length ==0||a9.length ==0||a10.length ==0||a11.length ==0)
     {
         alert( "Fill in Billing Address Details");
+        document.getElementById("myForm2").style.display = "block";
+
         return false;
 
     }

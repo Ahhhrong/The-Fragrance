@@ -41,6 +41,8 @@
                 if(response[i].password == password){
                     alert("Login Successful")
                     localStorage.setItem("username",username1)
+                    localStorage.setItem("id",response[i]._id)
+                    localStorage.setItem("password",response[i].password)
                     localStorage.setItem("point",response[i].point)
 
                 }
@@ -66,7 +68,10 @@
     
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
+      document.getElementById("myForm2").style.display = "none";
+
 
     }
+  
    
   

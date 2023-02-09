@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="Normalize.css" rel="stylesheet" type="text/css" />
+  <script src="product.js"></script>
+  <script src="login.js"></script>
+  <script src="a.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <header class="navigationBar" id="MYnavigationBar" >
+    <div class = "TopWordsFlex">
+      <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+      <a class="topLineNav" href="index.html">HOME</a>
+      <a class="topLineNav" href="body.html">Body</a>
+      <a class="topLineNav" href="hair.html">Hair</a>
+      <a class="topLineNav" href="contact.html">Feedback</a>
+      <a class="topLineNav" href="checkout.html">Cart</a>
+      <a class="topLineNav" href="login.html">Login</a>
+      <a class="topLineNav" href="register.js">register</a>
+      <a class="topLineNav" onclick="openForm()" >Profile Info</a>
+
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+          
+              <P id="displayname"></P>
+              <br>
+              <P id="point"></P>
+              <br>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+        <script>function myFunction1() {
+          var x = document.getElementById("MYnavigationBar");
+              if (x.className === "navigationBar") 
+              {
+                  x.className += " responsive";
+              } 
+              else 
+              {
+                  x.className = "navigationBar";
+              } 
+          }</script>
+    </div>
+</header>
+<br><br>    
+</head>
+
+
+
+
+
+<div class="container">
+    <h2 class="size32">
+        <span class="base" data-ui-id="page-title-wrapper">Terms &amp; Conditions</span>    </h2>
+
+    <p style="text-align: justify;">Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern <strong>Venus Beauty’s</strong> relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>
+    <p style="text-align: justify;">The term <strong>‘Venus Beauty’</strong> or ‘us’ or ‘we’ refers to the owner of the website operated by <strong>Venus Beauty Pte Ltd</strong> whose registered office is 4 Toh Tuck Link, Venus Beauty Building, Level 3, Singapore 596226. The term ‘you’ refers to the user or viewer of our website.</p>
+    <p style="text-align: justify;">The use of this website is subject to the following terms of use:</p>
+    <ul>
+    <li style="text-align: justify;">The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
+    <li style="text-align: justify;">Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+    <li style="text-align: justify;">Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
+    <li style="text-align: justify;">This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
+    <li style="text-align: justify;">Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
+    <li style="text-align: justify;">From time to time, this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).</li>
+    <li style="text-align: justify;">Use of this website and these terms are governed by the laws of Singapore. Any claim relating to use of the website shall be heard by Singapore Courts.</li>
+    </ul>
+</div>
+<footer>
+    <br><br><br>
+  
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-heading 1">
+          <h2>Sitemap</h2>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Shop By Brand</a>
+        </div>
+        <div class="footer-heading 2">
+          <h2>Helpful Links</h2>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Payment</a>
+          <a href="#">Shipping</a>
+          <a href="#">Return & Exchange</a>
+        </div>
+        <div class="footer-heading 3">
+          <h2>My Account</h2>
+          <a href="#">My Shopping Cart</a>
+          <a href="#">Login/Register</a>
+        </div>
+        <div class="footer-email">
+          <h2>Join Our Mailing List</h2>
+          <input type="email" placeholder="Email address" id="footer-email-address">
+          <input type="submit" value="Sign Up" id="footer-email-button"> 
+        </div>
+      </div>
+    </div>
+</footer>

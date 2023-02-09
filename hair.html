@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="Normalize.css">
-    <script src="product.js"></script>
 
-    <script src="a.js"></script>
-    <link rel="stylesheet" href="https://start.sanctuarytech.co/dist/js/element-ui.css">
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-851C9SJSJN&amp;l=dataLayer&amp;cx=c"></script>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WVCBJFS"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-<script src="login.js"></script>
-    <header class="navigationBar" id="MYnavigationBar" >
-      <div class = "TopWordsFlex">
-          <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
-          <a class="topLineNav" href="index.html">HOME</a>
-          <a class="topLineNav" href="body.html">Body</a>
-          <a class="topLineNav" href="hair.html">Hair</a>
-          <a class="topLineNav" href="contact.html">Feedback</a>
-          <a class="topLineNav" href="checkout.html">Cart</a>
-          <a class="topLineNav" href="login.html">Login</a>
-          <a class="topLineNav" href="register.js">register</a>
-          <button class="open-button" onclick="openForm()">Profile Info</button>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="Normalize.css" rel="stylesheet" type="text/css" />
+  <script src="product.js"></script>
+  <script src="login.js"></script>
+  <script src="a.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <header class="navigationBar" id="MYnavigationBar" >
+    <div class = "TopWordsFlex">
+      <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+      <a class="topLineNav" href="index.html">HOME</a>
+      <a class="topLineNav" href="body.html">Body</a>
+      <a class="topLineNav" href="hair.html">Hair</a>
+      <a class="topLineNav" href="contact.html">Feedback</a>
+      <a class="topLineNav" href="checkout.html">Cart</a>
+      <a class="topLineNav" href="login.html">Login</a>
+      <a class="topLineNav" href="register.js">register</a>
+      <a class="topLineNav" onclick="openForm()" >Profile Info</a>
 
           <div class="form-popup" id="myForm">
             <form  class="form-container">
@@ -37,99 +34,85 @@
               <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
           </div>
-          <script>
-            function openForm() {
-              document.getElementById("myForm").style.display = "block";
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+        <script>function myFunction1() {
+          var x = document.getElementById("MYnavigationBar");
+              if (x.className === "navigationBar") 
+              {
+                  x.className += " responsive";
+              } 
+              else 
+              {
+                  x.className = "navigationBar";
+              } 
+          }</script>
+    </div>
+</header>
+</head>
 
-            }
-            
-            function closeForm() {
-              document.getElementById("myForm").style.display = "none";
 
-            }
-            </script>          
-            
-  <script>                    document.getElementById("displayname").innerHTML="user "+ localStorage.getItem("username")+"\n"
-   document.getElementById("point").innerHTML="point "+ localStorage.getItem("point")
-  </script>
-          <a href="javascript:void(0);" class="icon" onclick="navigationbar()"><i class="fa fa-bars"></i></a>
-          <script>function navigationbar() {
-            var x = document.getElementById("MYnavigationBar");
-                if (x.className === "navigationBar") 
-                {
-                    x.className += " responsive";
-                } 
-                else 
-                {
-                    x.className = "navigationBar";
-                } 
-            }</script>
-      </div>
-    </header>
-</head>   
-<body>
-    <br><br>
-    <br>
-    <div class="card" >
-        <div class="row">
-            <p class="center" style="font-size: x-large;">Hair Product</p>
-            <br>
-            <div class="column" style="width: 300px;margin: auto;">
-                <div class="card" >
-                    <img class= "image" src="img/body1.jpg" >
-                    <h1 class="center" style="font-size: medium;" id="product1" >Product1</h1>
-                    <a>$</a><span  id="price1" >79</span>
-                    <br>
-                    <br>
-                    <br>
-             
-                    <select  id="quantity1">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-            
-                    </select>
-                        <br>
-                        <br>
-                        <br>
+<body> <div class="card" >
+  <div class="row">
+      <p  style="font-size: x-large;">Hair Product</p>
+      <div class="column" style="width: 300px;margin: auto;">
+        <div class="card" >
+          <img class= "center" src="img/hair1.webp" style="height: 200px;width: 200px;" >
+          <h1 class="center" style="font-size: medium;" id="product5" >Product5</h1>
+          <a>$</a><span  id="price5" >79</span>
+          <br>
+          <br>
+          <br>
+   
+          <select  id="quantity5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+  
+          </select>
+              <br>
+              <br>
+              <br>
 
-                        <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product1()" >Add to Cart</button></a></p>
-                      </div>
-            </div><div class="column" style="width: 300px;margin: auto;">
-              <div class="card" >
-                  <img class= "image" src="img/body1.jpg" >
-                  <h1 class="center" style="font-size: medium;" id="product2" >Product2</h1>
-                  <a>$</a><span  id="price2" >79</span>
-                  <br>
-                  <br>
-                  <br>
-           
-                  <select  id="quantity2">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-          
-                  </select>
-                      <br>
-                      <br>
-                      <br>
+              <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product5()" >Add to Cart</button></a></p>
+            </div>
+      
+    </div>
+    <div class="column" style="width: 300px;margin: auto;">
+      <div class="card" >
+        <img class= "center" src="img/hair2.webp" style="height: 200px;width: 200px;" >
+        <h1 class="center" style="font-size: medium;" id="product6" >product6</h1>
+          <a>$</a><span  id="price6" >79</span>
+          <br>
+          <br>
+          <br>
+   
+          <select  id="quantity6">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+  
+          </select>
+              <br>
+              <br>
+              <br>
 
-                      <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product2()" >Add to Cart</button></a></p>
-                    </div>
+              <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product6()" >Add to Cart</button></a></p>
+            </div>
           </div><div class="column" style="width: 300px;margin: auto;">
             <div class="card" >
-                <img class= "image" src="img/body1.jpg" >
-                <h1 class="center" style="font-size: medium;" id="product3" >product3</h1>
-                <a>$</a><span  id="price3" >79</span>
+              <img class= "center" src="img/hair3.webp" style="height: 200px;width: 200px;" >
+                <h1 class="center" style="font-size: medium;" id="product7" >product7</h1>
+                <a>$</a><span  id="price7" >79</span>
                 <br>
                 <br>
                 <br>
          
-                <select  id="quantity3">
+                <select  id="quantity7">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -140,32 +123,66 @@
                     <br>
                     <br>
                     <br>
-
-                    <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product3()" >Add to Cart</button></a></p>
+  
+                    <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product7()" >Add to Cart</button></a></p>
                   </div>
-        </div><div class="column" style="width: 300px;margin: auto;">
-          <div class="card" >
-              <img class= "image" src="img/body1.jpg" >
-              <h1 class="center" style="font-size: medium;" id="product4" >product4</h1>
-              <a>$</a><span  id="price4" >79</span>
-              <br>
-              <br>
-              <br>
-       
-              <select  id="quantity4">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-      
-              </select>
-                  <br>
-                  <br>
-                  <br>
+                </div><div class="column" style="width: 300px;margin: auto;">
+                  <div class="card" >
+                    <img class= "center" src="img/hair4.webp" style="height: 200px;width: 200px;" >
+                    <h1 class="center" style="font-size: medium;" id="product8" >product8</h1>
+                      <a>$</a><span  id="price8" >79</span>
+                      <br>
+                      <br>
+                      <br>
+               
+                      <select  id="quantity8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+              
+                      </select>
+                          <br>
+                          <br>
+                          <br>
+        
+                          <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product8()" >Add to Cart</button></a></p>
+                        </div>
 
-                  <p><a ><button type="button" style="color: white;text-decoration: none; " id="button1"   onclick="product4()" >Add to Cart</button></a></p>
-                </div>
-      </div>
+          
+</div>
     </div>
+</div>
 </body>
+
+<footer>
+  <br><br><br>
+
+  <div class="footer-container">
+    <div class="footer">
+      <div class="footer-heading 1">
+        <h2>Sitemap</h2>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">FAQs</a>
+        <a href="#">Shop By Brand</a>
+      </div>
+      <div class="footer-heading 2">
+        <h2>Helpful Links</h2>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Payment</a>
+        <a href="#">Shipping</a>
+        <a href="#">Return & Exchange</a>
+      </div>
+      <div class="footer-heading 3">
+        <h2>My Account</h2>
+        <a href="#">My Shopping Cart</a>
+        <a href="#">Login/Register</a>
+      </div>
+      <div class="footer-email">
+        <h2>Join Our Mailing List</h2>
+        <input type="email" placeholder="Email address" id="footer-email-address">
+        <input type="submit" value="Sign Up" id="footer-email-button">     </footer>
+
+</html>

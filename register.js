@@ -43,6 +43,53 @@
         alert("Username Existed")
       });
     });//end click 
+    
   
    
+    
+    
   
+  function order()
+  {
+    if(localStorage.getItem("point") >= document.getElementById("fclaim").value)
+    {
+      alert("Order Successfully")
+      var a=localStorage.getItem("point")-document.getElementById("fclaim").value
+      document.getElementById("totalpoint").innerHTML=sessionStorage.getItem("ttotal")-document.getElementById("fclaim").value;
+      localStorage.removeItem("point")
+      localStorage.setItem("point",a)
+      
+      let point1 =localStorage.getItem("point");
+      let username1 = localStorage.getItem("username")
+      let password1= localStorage.getItem("password")
+      let id1 = localStorage.getItem("id")
+      var jsondata = { 
+        "username" : username1,
+        "password":password1,
+        "point":point1,
+        
+      }
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://asst2-22ba.restdb.io/rest/profile/${id1}`,
+        "method": "PUT",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "63e279d9478852088da67e71",
+          "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+      }
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+       
+    }
+    else
+    {
+      alert("Order Failed. Insufficient balance")
+    }
+    
+  }

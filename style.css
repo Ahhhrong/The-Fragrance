@@ -625,7 +625,7 @@ body{
   
   @media screen and (max-width: 1150px) {
     .footer {
-      height: 50vh;
+      height: 20%;
     }
     .footer-email{
       margin-top: 4rem;
