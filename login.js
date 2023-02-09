@@ -58,3 +58,15 @@
   
     });
   
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+
+    }
+   document.getElementById("displayname").innerHTML="user "+ localStorage.getItem("username")+"\n"
+   document.getElementById("point").innerHTML="point "+ localStorage.getItem("point")
+  

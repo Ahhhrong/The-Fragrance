@@ -1,3 +1,14 @@
+function navigationbar() {
+    var x = document.getElementById("MYnavigationBar");
+        if (x.className === "navigationBar") 
+        {
+            x.className += " responsive";
+        } 
+        else 
+        {
+            x.className = "navigationBar";
+        } 
+    }
 function myFunction1() {
     // Get the value of the input field with id="numb"
     let a = document.getElementById("name").value;
