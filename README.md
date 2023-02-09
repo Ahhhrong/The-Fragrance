@@ -1,22 +1,20 @@
-# Your Project's Name
-
-This Website allows user to Know JJ Lin upcoming event, Background Of JJ Lin, Shopping Merchant , Contact JJ Lin Company.
+# The Fragrance
+This website allows user to shop for items such as facial cleansers, shampoos and more.
 
  
 ## Design Process
+Our Design Process is creating a website/store that allows users to shop and purchase the products they desire at the comfort of their homes and have them delivered swiftly. Our webiste also shows the current top selling products as well as items that we recommend as gifts.   
 
-My Design Process is creating a Merchant Website allows users to purchase merchant of JJ LIn. What i want to achieve is to let user purchase merchant & provide contact info to let user contact them. My project allows user to purchase merchant,checkout,providing Contact info.
+As a user, I want to know the current top selling products to see what the general public feels is good.
 
-- As a user I want to purchase merchant go to shopping chose product & quantity then add to cart then fill Billing Details & card info then click on checkout to go to receipt.
-- As a user i want to find out JJ LIn Social media i can go to index page go to social media section to get the links to the different social media or go to footer to go to different social media.
-- as a user i want to ask a querie i will go to contact form to submit a form.
+As a user, when shopping for gifts, having recommendations will be very useful so that I know what is a good product to gift others. 
+
+As a user, 
 
 
 [WireFrame Mobile Version](https://xd.adobe.com/view/1667a28f-db17-4060-9ffe-367c7513cabf-4334/)
 [WireFrame Web Version](https://xd.adobe.com/view/12c8ec13-65d9-4982-ac05-e0844f514a9e-479b/)
-<!-- This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
-These files should themselves either be included as a pdf file in the project itself (in an separate directory)
-Include the Adobe XD wireframe as a folder. You can include the XD share url.  -->
+
 
 ## Features
 
@@ -29,9 +27,7 @@ In this section, you should go over the different parts of your project, and des
 - shopping - allow user to purchase merchant by chosing product then checkout
 - Links - Allows user to go to different JJ Lin social media
 - image-to see different image of JJ Lin in index form
-- information of JJ Lin in index page
-- youtube video to watch jj lin world tour
-  
+- information of JJ Lin in index page  
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
@@ -47,10 +43,10 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 - HTML
     - To Create different pages
-- Css
-    - To create html element are to display
-- Js
-    -  To make hambuger button,button clicked check information/copy information 
+- CSS
+    - To style the html elements to display
+- JS
+    -  To make hambuger button, button clicked check information/copy information 
 
 ## Testing
 
@@ -77,6 +73,7 @@ You should also mention in this section any interesting bugs or problems you dis
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Credits
+Website logo was taken from Canva.com
 
 ### Content
 - The text for Index Page was copied from the [[Wikipedia article Z](https://en.wikipedia.org/wiki/Z)](https://en.wikipedia.org/wiki/JJ_Lin)
