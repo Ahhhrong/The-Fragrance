@@ -30,7 +30,7 @@ $(document).ready(function () {
       let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://asst2-22ba.restdb.io/rest/feedback",
+        "url": "https://asst2-22ba.restdb.io/rest/profile",
         "method": "POST", //[cher] we will use post to send info
         "headers": {
           "content-type": "application/json",
