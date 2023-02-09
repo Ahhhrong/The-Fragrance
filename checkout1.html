@@ -311,7 +311,52 @@
                 <p>Total after deduction $  <span  style="color:black" id="totalpoint" ><b></b></span></p>
 
                 <script>
-                 
+                  function order()
+                  {
+                    if(localStorage.getItem("point") >= document.getElementById("fclaim").value)
+                    {
+                      alert("Order Successfully")
+                      var a=localStorage.getItem("point")-document.getElementById("fclaim").value
+                      document.getElementById("totalpoint").innerHTML=sessionStorage.getItem("ttotal")-document.getElementById("fclaim").value;
+                      localStorage.removeItem("point")
+                      localStorage.setItem("point",a)
+                      updatepoint()
+                      function updatepoint(){
+                        alert(point)
+                      let point =localStorage.getItem("point");
+                      let username = localStorage.getItem("username")
+                      let password = localStorage.getItem("password")
+                      let id = localStorage.getItem("id")
+                      var jsondata = { 
+                        "username" : username,
+                        "password":password,
+                        "point":point,
+                        
+                      }
+                      var settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": `https://asst2-22ba.restdb.io/rest/profile/${id}`,
+                        "method": "PUT",
+                        "headers": {
+                          "content-type": "application/json",
+                          "x-apikey": "63e279d9478852088da67e71",
+                          "cache-control": "no-cache"
+                        },
+                        "processData": false,
+                        "data": JSON.stringify(jsondata)
+                      }
+                      $.ajax(settings).done(function (response) {
+                        console.log(response);
+                      });
+                    }
+                    }
+                    else
+                    {
+                      alert("Order Failed. Insufficient balance")
+                    }
+                    
+                  }
                 </script>
                 <input type="submit" value="Confirm Order"  onclick="order()">
 
@@ -324,7 +369,6 @@
 
 
 
-
 <footer>
   <br><br><br>
 
@@ -333,26 +377,24 @@
       <div class="footer-heading 1">
         <h2>Sitemap</h2>
         <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="feedback.js">Contact Us</a>
         <a href="#">FAQs</a>
         <a href="#">Shop By Brand</a>
       </div>
       <div class="footer-heading 2">
         <h2>Helpful Links</h2>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Payment</a>
+        <a href="tnc.html">Terms & Conditions</a>
+        <a href="checkout.html">Payment</a>
         <a href="#">Shipping</a>
-        <a href="#">Return & Exchange</a>
+        <a href="tnc.html">Return & Exchange</a>
       </div>
       <div class="footer-heading 3">
         <h2>My Account</h2>
-        <a href="#">My Shopping Cart</a>
-        <a href="#">Login/Register</a>
+        <a href="checkout.html">My Shopping Cart</a>
+        <a href="login.html">Login/Register</a>
       </div>
       <div class="footer-email">
         <h2>Join Our Mailing List</h2>
         <input type="email" placeholder="Email address" id="footer-email-address">
-        <input type="submit" value="Sign Up" id="footer-email-button">     </footer>
-
-</html>
+        <input type="submit" value="Sign Up" id="footer-email-button">     </footer></html>
 

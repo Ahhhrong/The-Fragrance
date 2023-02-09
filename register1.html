@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-  <header class="navigationBar" id="MYnavigationBar" >
-    <div class = "TopWordsFlex">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="Normalize.css" rel="stylesheet" type="text/css" />
+    <script src="product.js"></script>
+    <script src="login.js"></script>
+    <script src="a.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <header class="navigationBar" id="MYnavigationBar" >
+      <div class = "TopWordsFlex">
         <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
-        <a class="topLineNav" href="index.html">HOME</a>
-        <a class="topLineNav" href="contact.html">Body</a>
-        <a class="topLineNav" href="contact.html">Hair</a>
-
+        <a class="topLineNav" href="index.html">Home</a>
+        <a class="topLineNav" href="body.html">Body</a>
+        <a class="topLineNav" href="hair.html">Hair</a>
         <a class="topLineNav" href="contact.html">Feedback</a>
-
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-        <script>function myFunction() {
-          var x = document.getElementById("MYnavigationBar");
-              if (x.className === "navigationBar") 
-              {
-                  x.className += " responsive";
-              } 
-              else 
-              {
-                  x.className = "navigationBar";
-              } 
-          }</script>
-    </div>
-</header>
-</head>
-
+        <a class="topLineNav" href="checkout.html">Cart</a>
+        <a class="topLineNav" href="login.html">Login</a>
+        <a class="topLineNav" href="register.js">Register</a>
+        <a class="topLineNav" onclick="openForm()" >Profile Info</a>
+  
+            <div class="form-popup" id="myForm">
+              <form  class="form-container">
+            
+                <P id="displayname"></P>
+                <br>
+                <P id="point"></P>
+                <br>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+      
+          <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+          <script>function myFunction1() {
+            var x = document.getElementById("MYnavigationBar");
+                if (x.className === "navigationBar") 
+                {
+                    x.className += " responsive";
+                } 
+                else 
+                {
+                    x.className = "navigationBar";
+                } 
+            }</script>
+      </div>
+  </header>
+  </head>
+  
+  
+  
 <body>
   <br><br><br>
 
@@ -52,7 +73,7 @@
             </div>
           
           
-          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <p>By creating an account you agree to our <a href="tnc.html">Terms & Privacy</a>.</p>
 
           <input type="submit" value="Register" class="btn btn-primary" id="register">
          <hr>
@@ -70,34 +91,31 @@
 <script src="/js/bootstrap.min.js"></script>
 <script src="register.js"></script>
   </body>
+  <footer>
+    <br><br><br>
   
-<footer>
-  <br><br><br>
-
-  <div class="footer-container">
-    <div class="footer">
-      <div class="footer-heading 1">
-        <h2>Sitemap</h2>
-        <a href="#">About Us</a>
-        <a href="#">Contact Us</a>
-        <a href="#">FAQs</a>
-        <a href="#">Shop By Brand</a>
-      </div>
-      <div class="footer-heading 2">
-        <h2>Helpful Links</h2>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Payment</a>
-        <a href="#">Shipping</a>
-        <a href="#">Return & Exchange</a>
-      </div>
-      <div class="footer-heading 3">
-        <h2>My Account</h2>
-        <a href="#">My Shopping Cart</a>
-        <a href="#">Login/Register</a>
-      </div>
-      <div class="footer-email">
-        <h2>Join Our Mailing List</h2>
-        <input type="email" placeholder="Email address" id="footer-email-address">
-        <input type="submit" value="Sign Up" id="footer-email-button">     </footer>
-</html>
-
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-heading 1">
+          <h2>Sitemap</h2>
+          <a href="#">About Us</a>
+          <a href="feedback.js">Contact Us</a>
+          <a href="#">FAQs</a>
+          <a href="#">Shop By Brand</a>
+        </div>
+        <div class="footer-heading 2">
+          <h2>Helpful Links</h2>
+          <a href="tnc.html">Terms & Conditions</a>
+          <a href="checkout.html">Payment</a>
+          <a href="#">Shipping</a>
+          <a href="tnc.html">Return & Exchange</a>
+        </div>
+        <div class="footer-heading 3">
+          <h2>My Account</h2>
+          <a href="checkout.html">My Shopping Cart</a>
+          <a href="login.html">Login/Register</a>
+        </div>
+        <div class="footer-email">
+          <h2>Join Our Mailing List</h2>
+          <input type="email" placeholder="Email address" id="footer-email-address">
+          <input type="submit" value="Sign Up" id="footer-email-button">     </footer></html>
