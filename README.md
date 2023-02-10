@@ -9,11 +9,11 @@ As a user, I want to know the current top selling products to see what the gener
 
 As a user, when shopping for gifts, having recommendations will be very useful so that I know what is a good product to gift others. 
 
-As a user, 
+As a user, I want loyalty points so that I can redeem to buy items at a cheaper price. 
 
 
-[WireFrame Mobile Version](https://xd.adobe.com/view/1667a28f-db17-4060-9ffe-367c7513cabf-4334/)
-[WireFrame Web Version](https://xd.adobe.com/view/12c8ec13-65d9-4982-ac05-e0844f514a9e-479b/)
+[WireFrame Mobile Version](https://xd.adobe.com/view/0ab9d207-ccdc-435e-8940-6a53c28e42d2-5fea/)
+[WireFrame Web Version](https://xd.adobe.com/view/365c723e-de5c-49ec-9159-4c9ce62667a9-630f/)
 
 
 ## Features
@@ -22,24 +22,15 @@ In this section, you should go over the different parts of your project, and des
  
 ### Existing Features
 - Hamburger Menu - allows users to go to the different pages
-- Footer - Social Media icon link to different social media
 - Contact form  - allow user to submit queries, by filling up the form
-- shopping - allow user to purchase merchant by chosing product then checkout
-- Links - Allows user to go to different JJ Lin social media
-- image-to see different image of JJ Lin in index form
-- information of JJ Lin in index page  
+- Shopping - allow user to purchase merchant by chosing product then checkout
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Live chat Features to get live support
-- create accounts in order to use page
-- Marketing opt in to email newsletter
+- Game to earn extra loyalty points.
+- Live customer service. 
 
 ## Technologies Used
-
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
 
 - HTML
     - To Create different pages
@@ -52,15 +43,17 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
+1. Feedback form:
+    1. Go to the "Feedback" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid 8 Digit Phone NUmber and verify that a relevant error message appears
+    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
 
 2. Checkout Form:
-   1. Go to the "checkout" Page
+   1. Go to the "Cart" Page
    2. try to submit empty form and verify that an alert & error message about the required fields appears.
    3. try to go to "checkout" page without any Product  and verify an alert about Empty cart appears.
+
+3. 
    
 
 
@@ -83,4 +76,4 @@ Website logo was taken from Canva.com
 
 ### Acknowledgements
 
-- I received inspiration for this project from [JJ Lin](https://www.jjlin.com/home/news/all)
+- I received inspiration for this project from [Venus Beauty](https://www.venusbeauty.com.sg/) 
