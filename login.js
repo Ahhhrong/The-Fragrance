@@ -72,6 +72,15 @@
 
 
     }
-  
+
+      function logout() {
+        document.getElementById("myForm").style.display = "none";
+
+        localStorage.removeItem("username")
+        localStorage.removeItem("password")
+        localStorage.removeItem("point")
+        localStorage.removeItem("id")
+
+      }
    
   

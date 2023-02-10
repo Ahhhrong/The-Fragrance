@@ -1,0 +1,161 @@
+
+ 			
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="Normalize.css" rel="stylesheet" type="text/css" />
+  <script src="product.js"></script>
+  <script src="login.js"></script>
+  <script src="a.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <header class="navigationBar" id="MYnavigationBar" >
+    <div class = "TopWordsFlex">
+      <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+      <a class="topLineNav" href="index.html">Home</a>
+      <a class="topLineNav" href="body.html">Body</a>
+      <a class="topLineNav" href="hair.html">Hair</a>
+      <a class="topLineNav" href="contact.html">Feedback</a>
+      <a class="topLineNav" href="checkout.html">Cart</a>
+      <a class="topLineNav" href="login.html">Login</a>
+      <a class="topLineNav" href="register1.html">Register</a>
+      <a class="topLineNav" onclick="openForm()" >Profile Info</a>
+
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+          
+              <P id="displayname"></P>
+              <br>
+              <P id="point"></P>
+              <br>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="button" class="btn cancel" onclick="logout()">Log Out</button>
+
+            </form>
+          </div>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+        <script>function myFunction1() {
+          var x = document.getElementById("MYnavigationBar");
+              if (x.className === "navigationBar") 
+              {
+                  x.className += " responsive";
+              } 
+              else 
+              {
+                  x.className = "navigationBar";
+              } 
+          }</script>
+    </div>
+</header>
+<br><br>    
+</head>
+
+
+
+
+
+<div class="container">
+    
+    <h4>1. How do I place an order?</h4>
+<p style="text-align: justify;">a. Browse/search for an item in our e-shop, click on the item that you want. Key in the quantity that you want to purchase and add to cart. Key in discount codes if you have any and click proceed to checkout.<br>b. Login/Register your account and key in your billing information and shipping information. Select your preferred shipping method and payment method, key in your payment details. Review your order and proceed with payment.<br>c. Once done, you will receive a payment confirmation email.</p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"><strong>2. I missed some items and forgot to add to cart, can I still do it after checkout?&nbsp;<br></strong>No, you are not able to. Please take note the order is <span style="text-decoration: underline;"><strong>final</strong></span><strong></strong> once payment has been made.&nbsp;Customers are advised to check all items in cart before making payment.</p>
+<p style="text-align: justify;"></p>
+<p style="text-align: justify;"><strong>3. I chose the wrong product type/colour/quantity, can I change?&nbsp;<br></strong>No, you are not able to. Please take note the order is&nbsp;<strong>final</strong><strong></strong>&nbsp;once payment has been made. Customers are advised to check all items in cart before making payment.</p>
+<hr>
+<h4>4. How do I create an account?</h4>
+<p style="text-align: justify;">a. Click on “REGISTER” at the top right hand corner.<br>b. Kindly ensure your email address is keyed in correctly. <br>c. Please set your password of minimum 8 characters with at least 1 Uppercase, 1 lowercase and 1 numerical character.<br>d. An account confirmation email will be sent to your email account. Please also check your junk mail if you do not receive it.</p>
+<hr>
+<h4>5. Can I still change my address, or cancel order after the order is processing?</h4>
+<p style="text-align: justify;">As your order will be processed immediately, you will not be able to make any changes to your order once you have confirmed payment.&nbsp;</p>
+<hr>
+<h4>6.<a name="vpoints"></a> What is Vpoint and how is it used?</h4>
+<p style="text-align: justify;">Customers can earn Vpoint by purchasing amount of more than $10. For every $10 spent, you earn 2 Vpoints.</p>
+<p style="text-align: justify;">Customers are able to utilize the Vpoints on the next purchase with a minimum purchase amount of $20(without GST), capped at 10% of the purchase amount.</p>
+<p style="text-align: justify;">All Vpoints will be valid for <span style="text-decoration: underline;">90 days (from the day it is credited into your account)</span>&nbsp;before it expires.</p>
+<p><strong>How to Use:</strong></p>
+<p>If you are viewing on desktop:<br>Click on the cart logo and press “view cart” instead of “checkout”</p>
+<p>If you are on mobile:<br>Tap on the cart logo and scroll all the way to the bottom.<br>You will be able to see this section below the grand total price summary.</p>
+<p><img src="https://www.venusbeauty.com.sg/pub/media/wysiwyg/vpoint.jpg" alt=""></p>
+<hr>
+<h4>7. Can I return/exchange/refund my order?</h4>
+<p style="text-align: justify;">No, goods sold are not refundable. Please choose and buy your items with caution. We do, however, allow exchanges if your item is substandard. To be eligible for an exchange, please check our exchange policy <a href="/return-exchange">here</a>. In this case, please send an email to&nbsp;<a href="sales@venusbeauty.com.sg">sales@venusbeauty.com.sg</a> with your order details and photo attachments as proof.<br><br><strong>Product Packaging:</strong>&nbsp;In the event a product has changed packaging we reserve all rights to provide Customer with whichever product the supplier has given us with accordance to barcode.<br><br><span>Venus Beauty E-Shop shall <span style="text-decoration: underline;"><strong>not</strong></span> be liable to any Customer/person for any loss, damage incurred or inconvenience suffered in the event Venus Beauty E-shop declines to fulfil an order for whatever reason including but not limited to an unforeseen circumstance (e.g. lack of availability, quantity or specification etc) as the case may be.</span></p>
+<p style="text-align: justify;"><span></span><span style="font-size: 1em;"></span></p>
+<p style="text-align: justify;"><span style="font-size: 1em;"></span></p>
+<p style="text-align: justify;"><span style="font-size: 1em;">In the event refunds have to be made, refunds with value under $5 will be processed as Vpoints for quicker action.&nbsp;</span></p>
+<p style="text-align: justify;"><strong><span style="font-size: 1em;"><br>8. Administrative fees</span></strong></p>
+<p style="text-align: justify;">Please take note that an administrative fee ($5) and cancellation fee ($5)&nbsp;<span style="text-decoration: underline;">will be charged</span> if customer choose to cancel order due to change of mind/shipping address is overseas etc.<br><br></p>
+<hr>
+<h4>9. For shipping related information, please go <a href="//www.venusbeauty.com.sg/shipping/">here</a>.</h4>    </div>
+    <div class="category-cms">
+        </div>
+<input name="form_key" type="hidden" value="jalCTOT13mdvRYxy"><div id="authenticationPopup" data-bind="scope:'authenticationPopup'" style="display: none;">
+
+</div>
+
+</div><footer>
+    <br><br><br>
+  
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-heading 1">
+          <h2>Sitemap</h2>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html">Shop By Brand</a>
+        </div>
+        <div class="footer-heading 2">
+          <h2>Helpful Links</h2>
+          <a href="tnc.html">Terms & Conditions</a>
+          <a href="checkout.html">Payment</a>
+          <a href="tnc.html">Return & Exchange</a>
+        </div>
+        <div class="footer-heading 3">
+          <h2>My Account</h2>
+          <a href="checkout.html">My Shopping Cart</a>
+          <a href="login.html">Login/Register</a>
+
+        </div>
+        <div class="footer-email">
+          <h2>Join Our Mailing List</h2>
+          <input type="email" placeholder="Email address" id="footer-email-address">
+          <input type="submit" value="Sign Up" id="footer-email-button">     </footer></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

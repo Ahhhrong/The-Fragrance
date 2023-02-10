@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
 <head>
 	<meta charset="utf-8">
@@ -7,7 +8,9 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="style.css" rel="stylesheet" type="text/css" />
   <link href="Normalize.css" rel="stylesheet" type="text/css" />
-
+  <script src="product.js"></script>
+  <script src="login.js"></script>
+  <script src="a.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
   <header class="navigationBar" id="MYnavigationBar" >
     <div class = "TopWordsFlex">
@@ -21,8 +24,21 @@
       <a class="topLineNav" href="register1.html">Register</a>
       <a class="topLineNav" onclick="openForm()" >Profile Info</a>
 
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-        <script>function myFunction() {
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+          
+              <P id="displayname"></P>
+              <br>
+              <P id="point"></P>
+              <br>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="button" class="btn cancel" onclick="logout()">Log Out</button>
+
+            </form>
+          </div>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+        <script>function myFunction1() {
           var x = document.getElementById("MYnavigationBar");
               if (x.className === "navigationBar") 
               {
@@ -35,8 +51,8 @@
           }</script>
     </div>
 </header>
+<br><br>    
 </head>
-
 <body>
   <br><br><br>
 
@@ -72,7 +88,7 @@
 .btn:hover {
   background-color: #45a049;
 }</style>
-          <input type="submit" value="Register" class="btn"  id="register">
+          <input type="submit" value="Login" class="btn"  id="register">
          <hr>
           <div >
             <p>Create a new account? <a href="register1.html">Register</a></p>
@@ -87,32 +103,44 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="login.js"></script>
-  </body>
-  <footer>
+  </body><footer>
     <br><br><br>
   
     <div class="footer-container">
       <div class="footer">
         <div class="footer-heading 1">
           <h2>Sitemap</h2>
-          <a href="#">About Us</a>
-          <a href="feedback.js">Contact Us</a>
-          <a href="#">FAQs</a>
-          <a href="#">Shop By Brand</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html">Shop By Brand</a>
         </div>
         <div class="footer-heading 2">
           <h2>Helpful Links</h2>
           <a href="tnc.html">Terms & Conditions</a>
           <a href="checkout.html">Payment</a>
-          <a href="#">Shipping</a>
           <a href="tnc.html">Return & Exchange</a>
         </div>
         <div class="footer-heading 3">
           <h2>My Account</h2>
           <a href="checkout.html">My Shopping Cart</a>
           <a href="login.html">Login/Register</a>
+
         </div>
         <div class="footer-email">
           <h2>Join Our Mailing List</h2>
           <input type="email" placeholder="Email address" id="footer-email-address">
           <input type="submit" value="Sign Up" id="footer-email-button">     </footer></html>
+
+
+
+
+
+
+
+
+
+
+
+
+

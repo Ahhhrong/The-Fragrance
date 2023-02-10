@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="Normalize.css" rel="stylesheet" type="text/css" />
+  <script src="product.js"></script>
+  <script src="login.js"></script>
+  <script src="a.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+  <header class="navigationBar" id="MYnavigationBar" >
+    <div class = "TopWordsFlex">
+      <a href="index.html"><img alt="PROAME" src="img/logo.jpg" style="height: 80px;width: 80px;"></a>
+      <a class="topLineNav" href="index.html">Home</a>
+      <a class="topLineNav" href="body.html">Body</a>
+      <a class="topLineNav" href="hair.html">Hair</a>
+      <a class="topLineNav" href="contact.html">Feedback</a>
+      <a class="topLineNav" href="checkout.html">Cart</a>
+      <a class="topLineNav" href="login.html">Login</a>
+      <a class="topLineNav" href="register1.html">Register</a>
+      <a class="topLineNav" onclick="openForm()" >Profile Info</a>
+
+          <div class="form-popup" id="myForm">
+            <form  class="form-container">
+          
+              <P id="displayname"></P>
+              <br>
+              <P id="point"></P>
+              <br>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              <button type="button" class="btn cancel" onclick="logout()">Log Out</button>
+
+            </form>
+          </div>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction1()"><i class="fa fa-bars"></i></a>
+        <script>function myFunction1() {
+          var x = document.getElementById("MYnavigationBar");
+              if (x.className === "navigationBar") 
+              {
+                  x.className += " responsive";
+              } 
+              else 
+              {
+                  x.className = "navigationBar";
+              } 
+          }</script>
+    </div>
+</header>
+<br><br>    
+</head>
+
+
+
+
+
+<div class="container" >
+    <div style="display: block;" class="tabcontent about-tab-content-75">
+        <div class="heading-text">
+            <h2 class="size32"> Who We Are </h2>
+        </div>
+                                                            <div class="tab-info-text">
+                <p>Venus Beauty Pte Ltd was born in 2002 with the simple concept of retailing everyday products. We worked hard at understanding our customers, sourcing for products that fit different needs and budgets.</p>
+<p>Since then, our company has grown to have 20 stores in operation, each holding over 5,000 products. Included in our offerings are cosmetics, skin care, hair care, body care, and fragrances. We also carry household cleaning products, some confectionaries, as well as specialty seasonal items.</p>
+<p>Venus Beauty is the local distributor of several imported brands, some of which are exclusive to our stores. We have also come to develop and feature a number of in-house brands.</p>							</div>
+                            </div>
+</div>
+<br><br>
+
+<div class="container">
+    <div style="display: block;" class="tabcontent about-tab-content-77">
+        <div class="heading-text">
+            <h2 class="size32"> Why Choose Us </h2>
+        </div>
+                                                            <div class="tab-info-text">
+                <p><strong>INDUSTRY EXPERTISE</strong></p>
+<p>We have a team of experienced sales people, all of whom are knowledgeable and skilled in delivering outstanding customer service. Our retail outlets hold a variety of brands, so we do not have allegiance to any which one in particular. Such impartiality allows us to give our customers informed choices, educating them about what is right for their needs.</p>
+<p><strong>UPGRADED STORAGE</strong></p>
+<p>Our storage facilities are equipped with proper ventilation systems. Having fully air-conditioned premises help in maintaining the original state of sensitive products like makeup and cosmetic drugs.In addition, we are capable of holding large quantities of stocks. This assures the constant availability of our customers’ favourite beauty and home products.</p>
+<p><strong>QUALITY ASSURANCE</strong></p>
+<p>Venus Beauty adheres to the guidelines specified by the Health and Science Authority of Singapore (HAS). They perform a thorough appraisal of imported products, ensuring adherence to international and local quality standards.</p>
+<p><strong>STRATEGIC LOCATIONS</strong></p>
+<p>Our outlets are strategically scattered throughout Singapore, allowing for maximum accessibility. Customers can drop by any of our stores nearest to them to cater to their personal and household needs. <span style="text-decoration: underline;"><a href="https://www.venusbeauty.com.sg/store-locator.html/">Visit the nearest store now!</a></span></p>
+<p><strong>COMPETITIVE PRICES</strong></p>
+<p>Venus Beauty has become one of the most trusted retailers in the local market. Our reputation is largely based on our wide selection of AUTHENTIC products that are sold at AFFORDABLE prices. Learn how we can offer cost savings by visiting our <a href="http://www.venusbeauty.com.sg/value-for-money.html"><span style="text-decoration: underline;">Value for Money</span></a> page.</p>
+<p><strong>ONLINE PARTNERSHIPS</strong></p>
+<p>We have made our products available on other online stores like <span style="text-decoration: underline;">Qoo10</span>, and <span style="text-decoration: underline;">Lazada</span>. Even with our e-commerce website, we still maintain these partnerships so as to let our clients have easy access to our products. Venus Beauty invites interested online stores for affiliations and partnerships. For business enquiries, please <a href="https://www.venusbeauty.com.sg/contact-us.html/"><span style="text-decoration: underline;">contact us</span></a>.</p>
+<p>&nbsp;</p>
+<p>Qoo10.sg :Giosis Pte. Ltd. is a joint venture company formed with eBay, the world's largest online marketplace, to become Asia's leading online marketplace. Giosis Group provides a powerful online marketplace platform that allows its buyers enjoy highly secure and convenient shopping experience. Giosis Group currently operates 7 localized online marketplaces in 5 countries including Japan (http://www.qoo10.jp)and Singapore(http://www.qoo10.sg)and plans to expand into more Asian countries in the near future.</p>
+<p>Lazada.sg : Lazada is Southeast Asia’s biggest online shopping mall, with operations in Malaysia, Indonesia, Thailand, Philippines, Vietnam and now Singapore. Lazada is pioneering e-commerce across some of the fastest growing countries in the world by offering a fast, secure and convenient online shopping experience.</p>							</div>
+                            </div>
+</div>
+
+<footer>
+    <br><br><br>
+  
+    <div class="footer-container">
+      <div class="footer">
+        <div class="footer-heading 1">
+          <h2>Sitemap</h2>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="faq.html">FAQs</a>
+          <a href="index.html">Shop By Brand</a>
+        </div>
+        <div class="footer-heading 2">
+          <h2>Helpful Links</h2>
+          <a href="tnc.html">Terms & Conditions</a>
+          <a href="checkout.html">Payment</a>
+          <a href="tnc.html">Return & Exchange</a>
+        </div>
+        <div class="footer-heading 3">
+          <h2>My Account</h2>
+          <a href="checkout.html">My Shopping Cart</a>
+          <a href="login.html">Login/Register</a>
+
+        </div>
+        <div class="footer-email">
+          <h2>Join Our Mailing List</h2>
+          <input type="email" placeholder="Email address" id="footer-email-address">
+          <input type="submit" value="Sign Up" id="footer-email-button">     </footer></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
