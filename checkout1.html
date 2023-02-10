@@ -145,7 +145,7 @@
                     {
                       alert("Order Successfully")
                       var a=localStorage.getItem("point")-document.getElementById("fclaim").value
-                      alert((sessionStorage.getItem("ttotal")-document.getElementById("fclaim").value)+"\n"+a    )                  
+                      alert("Price after deduction"+(sessionStorage.getItem("ttotal")-document.getElementById("fclaim").value)+"\nPoint left"+a    )                  
                       localStorage.removeItem("point")
                       localStorage.setItem("point",a)
                       sessionStorage.clear()
@@ -162,7 +162,7 @@
                       localStorage.removeItem("fstate");
                       updatepoint()
                       function updatepoint(){
-                        alert(point)
+                        alert( point)
                       let point =localStorage.getItem("point");
                       let username = localStorage.getItem("username")
                       let password = localStorage.getItem("password")
