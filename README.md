@@ -1,3 +1,6 @@
+#GITHUB
+https://ahhhrong.github.io/The-Fragrance/
+
 # The Fragrance
 This website allows user to shop for items such as facial cleansers, shampoos and more.
 
